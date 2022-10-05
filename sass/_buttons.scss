@@ -1,0 +1,45 @@
+button {
+	border: none;
+	background: none;
+	font: inherit;
+	cursor: pointer;
+}
+
+.btn {
+	background: linear-gradient(90deg, $lime-green, $bright-cyan);
+	color: $white;
+	padding: 1.5rem 3rem;
+	border-radius: 5rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	display: block;
+
+	transition: 0.25s ease;
+
+	@media only screen and (max-width: $bp-medium) {
+		display: none;
+	}
+}
+.btn:hover {
+	opacity: 0.7;
+}
+
+.hero__btn {
+	background: linear-gradient(90deg, $lime-green, $bright-cyan);
+	color: $white;
+	padding: 1rem 2.5rem;
+	border-radius: 5rem;
+	font-size: 1.3rem;
+	font-weight: 700;
+	display: block;
+
+	transition: 0.25s ease;
+
+	@media only screen and (max-width: $bp-medium) {
+		margin: 0 auto;
+	}
+}
+
+.hero__btn:hover {
+	opacity: 0.7;
+}

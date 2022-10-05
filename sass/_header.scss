@@ -1,0 +1,76 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 15rem;
+	height: 10rem;
+
+	@media only screen and (max-width: $bp-mdlarge) {
+		padding: 0 5rem;
+	}
+
+	&__logo {
+		width: 15rem;
+		height: 2.5rem;
+	}
+
+	&__nav-list {
+		list-style: none;
+		display: flex;
+		gap: 4rem;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $grayish-blue;
+		border-bottom: 4px transparent solid;
+		transition: all 0.3s;
+		padding: 3rem 0;
+		font-weight: 400;
+		background-clip: content-box;
+		position: relative;
+		font-size: 1.4rem;
+	}
+
+	&__link:hover {
+		color: $dark-blue;
+		border-bottom: 4px transparent solid;
+		border-image: linear-gradient(90deg, $lime-green, $bright-cyan) 1;
+	}
+}
+
+// Sticky navigation
+
+.sticky .header {
+	position: fixed;
+	top: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	width: 100%;
+	z-index: 999;
+	height: 8rem;
+	box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.07);
+	background-color: $white;
+
+	@media only screen and (max-width: $bp-medium) {
+		.header__main-nav {
+			background-color: $white;
+			position: absolute;
+			top: 12rem;
+
+			margin-left: auto;
+			margin-right: auto;
+			width: 88%;
+			height: 30rem;
+
+			box-shadow: 0 10px 40px hsla(0, 0%, 0%, 0.1);
+
+			transition: all 0.3s ease-in-out;
+
+			pointer-events: auto;
+
+			z-index: 9999;
+		}
+	}
+}
